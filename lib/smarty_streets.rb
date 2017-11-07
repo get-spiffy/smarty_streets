@@ -16,6 +16,7 @@ module SmartyStreets
     #     config.auth_id = 'AUTHID'
     #     config.auth_token = 'AUTHTOKEN'
     #     config.candidates = 1
+    #     config.match = 'strict'
     #   end
     def configure
       self.configuration = Configuration.new
