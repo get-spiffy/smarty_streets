@@ -6,6 +6,7 @@ module SmartyStreets
     attr_accessor :city, :state, :zipcode
     attr_accessor :lastline, :addressee, :urbanization
     attr_accessor :candidates
+    attr_accessor :match
 
     # Response only fields
     attr_accessor :input_index, :candidate_index

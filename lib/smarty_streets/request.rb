@@ -38,6 +38,7 @@ module SmartyStreets
         location.components             = l['components']
         location.metadata               = l['metadata']
         location.analysis               = l['analysis']
+        location.match                  = l['match']
         location
       end
     end
@@ -58,7 +59,7 @@ module SmartyStreets
         lastline: location.lastline,
         addressee: location.addressee,
         urbanization: location.urbanization,
-        match: location.match  || 'strict',
+        match: location.match || SmartyStreets.configuration.match,
         candidates: location.candidates || SmartyStreets.configuration.candidates,
         "auth-id" => SmartyStreets.configuration.auth_id,
         "auth-token" => SmartyStreets.configuration.auth_token
