@@ -58,6 +58,7 @@ module SmartyStreets
         lastline: location.lastline,
         addressee: location.addressee,
         urbanization: location.urbanization,
+        match: location.match,
         candidates: location.candidates || SmartyStreets.configuration.candidates,
         "auth-id" => SmartyStreets.configuration.auth_id,
         "auth-token" => SmartyStreets.configuration.auth_token
