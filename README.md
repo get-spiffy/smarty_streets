@@ -28,6 +28,7 @@ SmartyStreets.configure do |c|
   c.auth_id = 'MY-AUTH-ID'
   c.auth_token = 'MY-AUTH-TOKEN'
   c.candidates = 5
+  c.match = 'strict'
 end
 
 locations = SmartyStreets.standardize do |location|
