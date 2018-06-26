@@ -33,7 +33,11 @@ module SmartyStreets
         location.street2                = l['delivery_line_2']
         location.city                   = l['components']['city_name']
         location.state                  = l['components']['state_abbreviation']
-        location.zipcode                = l['components']['zipcode'] + '-' + l['components']['plus4_code']
+        if l['components']['plus4_code'].present?
+          location.zipcode                = l['components']['zipcode'] + '-' + l['components']['plus4_code']
+        else
+          location.zipcode                = l['components']['zipcode']
+        end
         location.delivery_point_barcode = l['delivery_point_barcode']
         location.components             = l['components']
         location.metadata               = l['metadata']
